@@ -1,0 +1,55 @@
+<?php
+
+class Playlist_Model extends Model {
+
+function __construct() {
+	parent::__construct();
+	$this->db = new Database();
+}
+
+function create($userid, $name, $postdate, $about = null) {  
+	$this->db->query("insert into playlist (userid, name, postdate) values ($userid, $name, $postdate)");
+}
+
+function addSong($playlistid, $songid, $position) {
+	
+}
+
+function findPlaylistByUserID($userid) {
+	$sth = $this->db->prepare("select * from playlist where userid = :userid");
+	$sth->execute(array(
+		':userid' => $userid
+	));
+	$data = $sth->fetchAll();
+	print_r($data);
+}
+
+function getSongs($playlistid) {
+	$this->db->query("select songid, position from playlistsong where playlistid = " . $playlistid . " order by position");
+	
+}
+
+}
+
+?>
+
+class Playlist extends Controller {
+	
+
+
+}
+
+class Controller {
+
+	function construct() {
+		$this->view = new View();
+	}
+
+	public function loadModel($name) {
+		require 'models/'.$name.'_model.php';
+		
+		$modelname = $name.'_Model';
+		$this->model = new $modelname();
+	}
+	
+}

@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('fonts/BEBAS___-webfont.eot');
+    src: url('fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BEBAS___-webfont.woff') format('woff'),
+         url('fonts/BEBAS___-webfont.ttf') format('truetype'),
+         url('fonts/BEBAS___-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+form {
+	width:459px;
+	font-size:100%;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin:0 auto;
+	display:block;
+}
+
+label {
+	display:block;
+	margin-top:20px;
+	letter-spacing:2px;
+}
+
+input, textarea {
+	width:439px;
+	height:27px;
+	background:#efefef;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+}
+
+	input:focus, textarea:focus {
+		border:1px solid #97d6eb;
+	}
+
+textarea {
+	height:213px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#submit {
+	background:url("img\submit.png");
+	width:127px;
+	height:38px;
+	margin-top:20px;
+	cursor:pointer;
+}
+
+	#submit:hover {
+		opacity:0.9;
+	}
+
+footer a img {
+	border:none;
+	float:right;
+	margin:0px 59px 40px 0px;
+}
