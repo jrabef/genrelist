@@ -3,7 +3,7 @@
 	
 					$hostname = "localhost";
 					$username = "root";
-					$password = "asw38913266";
+					$password = "$$$$$$$$$$$$$";
 					
 					$databaseName = "drdb2";
 
